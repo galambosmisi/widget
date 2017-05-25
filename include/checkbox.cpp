@@ -59,7 +59,7 @@ bool CheckBox::is_checked() const
     return _checked;
 }
 
-void CheckBox::get_data(ostream & datafile) const
+void CheckBox::get_data(ostream & datafile, int i) const
 {
-    datafile << "---S---" << endl << "A jelölő értéke: " << _checked << endl << "---E---";
+    datafile <<"----"<<i<<"----"<< endl << "A jelölő értéke: " << _checked << endl <<"----"<<i<<"----"<< endl;
 }

@@ -61,4 +61,4 @@ string Widget::cut_title(string title, int size_x) const
 
 void Widget::draw() const {}
 void Widget::handle(genv::event ev) {}
-void Widget::get_data(ostream & datafile) const {}
+void Widget::get_data(ostream & datafile, int i) const {}

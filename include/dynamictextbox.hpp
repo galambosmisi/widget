@@ -18,7 +18,7 @@ public:
     virtual void draw() const ;
     virtual void handle(genv::event ev);
 
-    virtual void get_data(ostream & datafile) const;
+    virtual void get_data(ostream & datafile, int i) const;
 };
 
 #endif // DYNAMICTXTBOX_H_INCLUDED

@@ -27,7 +27,7 @@ public:
     virtual void set_selected(bool selected);
     virtual void set_selectable(bool selectable);
     virtual void handle(genv::event ev);
-    virtual void get_data(ostream & datafile) const;
+    virtual void get_data(ostream & datafile, int i) const;
     virtual string cut_title(string title, int size_x) const;
 };
 

@@ -41,5 +41,11 @@ string StaticTextBox::get_title() const
     return _title;
 }
 
+void StaticTextBox::get_data(ostream & datafile, int i) const
+{
+    datafile <<"----"<<i<<"----"<< endl << "Jelenlegi tartalom: " << _title << endl <<"----"<<i<<"----"<< endl;
+}
+
+
 void StaticTextBox::handle(event ev) {}
 

@@ -18,12 +18,12 @@ protected:
     bool _run;
     int focus;
     const int _XX, _YY;
-    string name;
+    string _name;
 
 public:
     color back_, text_, aline_, pline_;
     color back_ground;
-    Window(int XX, int YY, color back_color, color text_color, color aline_color, color pline_color, color bg_color);
+    Window(string name, int XX, int YY, color back_color, color text_color, color aline_color, color pline_color, color bg_color);
     virtual void event_loop();
     virtual void push_item(Widget * w);
     virtual void set_run(bool run);

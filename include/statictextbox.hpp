@@ -18,6 +18,7 @@ public:
     virtual void draw() const ;
     virtual void handle(genv::event ev);
     virtual void set_title(string title);
+    virtual void get_data(ostream & datafile, int i) const;
     virtual string get_title() const;
 };
 

@@ -24,7 +24,7 @@ public:
     virtual string get_title() const;
     virtual void set_title_(string title);
     virtual void set_pushed(bool pushed);
-    virtual void get_data(ostream & datafile) const;
+    virtual void get_data(ostream & datafile, int i) const;
 };
 
 #endif // BUTTON_HPP_INCLUDED

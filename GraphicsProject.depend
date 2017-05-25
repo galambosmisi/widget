@@ -456,22 +456,22 @@
 	"widgets.hpp"
 	"map.hpp"
 
-1495708203 source:\\mac\home\desktop\widget_gm\include\button.cpp
+1495724241 source:\\mac\home\desktop\widget_gm\include\button.cpp
 	"button.hpp"
 	"graphics.hpp"
 
-1495705826 \\mac\home\desktop\widget_gm\include\button.hpp
+1495724241 \\mac\home\desktop\widget_gm\include\button.hpp
 	"graphics.hpp"
 	"widgets.hpp"
 	<functional>
 
-1495705957 \\mac\home\desktop\widget_gm\include\window.hpp
+1495724544 \\mac\home\desktop\widget_gm\include\window.hpp
 	"widgets.hpp"
 	"graphics.hpp"
 	<iostream>
 	<vector>
 
-1495708062 \\mac\home\desktop\widget_gm\include\widgets.hpp
+1495724269 \\mac\home\desktop\widget_gm\include\widgets.hpp
 	"window.hpp"
 	"graphics.hpp"
 
@@ -480,46 +480,46 @@
 
 1495622464 \\mac\home\desktop\widget_gm\include\color.hpp
 
-1495706042 source:\\mac\home\desktop\widget_gm\include\dropdownmenu.cpp
+1495724972 source:\\mac\home\desktop\widget_gm\include\dropdownmenu.cpp
 	"dropdownmenu.hpp"
 	"graphics.hpp"
 	<sstream>
 	<vector>
 	<iostream>
 
-1495703158 \\mac\home\desktop\widget_gm\include\dropdownmenu.hpp
+1495724385 \\mac\home\desktop\widget_gm\include\dropdownmenu.hpp
 	"graphics.hpp"
 	"widgets.hpp"
 	<vector>
 
-1495708384 source:\\mac\home\desktop\widget_gm\include\dynamictextbox.cpp
+1495724438 source:\\mac\home\desktop\widget_gm\include\dynamictextbox.cpp
 	"dynamictextbox.hpp"
 	"graphics.hpp"
 
-1495705878 \\mac\home\desktop\widget_gm\include\dynamictextbox.hpp
+1495724438 \\mac\home\desktop\widget_gm\include\dynamictextbox.hpp
 	"graphics.hpp"
 	"widgets.hpp"
 	"statictextbox.hpp"
 
-1495705892 \\mac\home\desktop\widget_gm\include\statictextbox.hpp
+1495724505 \\mac\home\desktop\widget_gm\include\statictextbox.hpp
 	"graphics.hpp"
 	"widgets.hpp"
 
-1495706030 source:\\mac\home\desktop\widget_gm\include\numericsetter.cpp
+1495724475 source:\\mac\home\desktop\widget_gm\include\numericsetter.cpp
 	"numericsetter.hpp"
 	"graphics.hpp"
 	<sstream>
 
-1495705878 \\mac\home\desktop\widget_gm\include\numericsetter.hpp
+1495724475 \\mac\home\desktop\widget_gm\include\numericsetter.hpp
 	"graphics.hpp"
 	"widgets.hpp"
 
-1495708384 source:\\mac\home\desktop\widget_gm\include\staticetextbox.cpp
+1495724505 source:\\mac\home\desktop\widget_gm\include\staticetextbox.cpp
 	"statictextbox.hpp"
 	"graphics.hpp"
 	<sstream>
 
-1495663073 source:\\mac\home\desktop\widget_gm\include\window.cpp
+1495724983 source:\\mac\home\desktop\widget_gm\include\window.cpp
 	"window.hpp"
 	"graphics.hpp"
 	<fstream>
@@ -527,21 +527,21 @@
 1495622932 source:\\mac\home\desktop\widget_gm\include\color.cpp
 	"color.hpp"
 
-1495663073 source:\\mac\home\desktop\widget_gm\include\checkbox.cpp
+1495724326 source:\\mac\home\desktop\widget_gm\include\checkbox.cpp
 	"checkbox.hpp"
 	"graphics.hpp"
 	<sstream>
 
-1495705826 \\mac\home\desktop\widget_gm\include\checkbox.hpp
+1495724326 \\mac\home\desktop\widget_gm\include\checkbox.hpp
 	"graphics.hpp"
 	"widgets.hpp"
 	<functional>
 
-1495708541 source:\\mac\home\desktop\widget_gm\include\widgets.cpp
+1495724281 source:\\mac\home\desktop\widget_gm\include\widgets.cpp
 	"widgets.hpp"
 	"graphics.hpp"
 
-1495708541 source:\\mac\home\desktop\widget_gm\main.cpp
+1495724635 source:\\mac\home\desktop\widget_gm\main.cpp
 	"graphics.hpp"
 	"window.hpp"
 	"widgets.hpp"
@@ -563,4 +563,13 @@
 	"graphics.hpp"
 	"widgets.hpp"
 	<vector>
+
+1495717514 source:\\mac\home\desktop\widget_gm\include\selector.cpp
+	"selector.hpp"
+	"graphics.hpp"
+	<sstream>
+
+1495715368 \\mac\home\desktop\widget_gm\include\selector.hpp
+	"graphics.hpp"
+	"widgets.hpp"
 

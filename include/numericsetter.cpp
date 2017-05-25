@@ -62,7 +62,7 @@ int NumericSetter::get_num() const
     return _num;
 }
 
-void NumericSetter::get_data(ostream & datafile) const
+void NumericSetter::get_data(ostream & datafile, int i) const
 {
-    datafile << "---S---" << "Jelenlegi érék: " << _num << endl << "---E---";
+    datafile <<"----"<<i<<"----"<< endl << "Jelenlegi ertek: " << _num << endl <<"----"<<i<<"----"<< endl;
 }

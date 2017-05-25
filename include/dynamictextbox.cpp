@@ -46,9 +46,9 @@ void DynamicTextBox::handle(genv::event ev)
     }
 }
 
-void DynamicTextBox::get_data(ostream & datafile) const
+void DynamicTextBox::get_data(ostream & datafile, int i) const
 {
-    datafile << "---S---" << "A jelenlegi tartalom: " << _title << endl << "---E---";
+    datafile <<"----"<<i<<"----"<< endl << "A jelenlegi tartalom: " << _title << endl <<"----"<<i<<"----"<< endl;
 }
 
 

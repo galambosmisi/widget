@@ -63,7 +63,7 @@ void Button::set_pushed(bool pushed)
     _pushed=pushed;
 }
 
-void Button::get_data(ostream & datafile) const
+void Button::get_data(ostream & datafile, int i) const
 {
-    datafile <<"----S----" << "A gomb felirata: " << _title << endl << "Értéke: " << _pushed << endl << "----E----" << endl;
+    datafile <<"----"<<i<<"----"<< endl << "A gomb felirata: " << _title << endl << "Erteke: " << _pushed << endl <<"----"<<i<<"----"<< endl;
 }

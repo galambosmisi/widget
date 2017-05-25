@@ -21,7 +21,7 @@ public:
     virtual bool is_checked() const ;
     virtual void set_action(std::function<void()> action);
     virtual void set_selected(bool selected);
-    virtual void get_data(ostream & datafile) const;
+    virtual void get_data(ostream & datafile, int i) const;
 };
 
 #endif // EXAMPLECHECKBOX_HPP_INCLUDED

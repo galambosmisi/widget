@@ -4,7 +4,8 @@
 
 using namespace genv;
 
-Window::Window(int XX, int YY, color back_color, color text_color, color aline_color, color pline_color, color bg_color): _XX(XX), _YY(YY), back_(back_color), text_(text_color), aline_(aline_color), pline_(pline_color), back_ground(bg_color), _run(true), focus(-1) {}
+Window::Window(string name, int XX, int YY, color back_color, color text_color, color aline_color, color pline_color, color bg_color): _name(name), _XX(XX), _YY(YY), back_(back_color), text_(text_color), aline_(aline_color), pline_(pline_color), back_ground(bg_color), _run(true), focus(-1) {}
+
 void Window::push_item(Widget * w)
 {
     widgets.push_back(w);
@@ -22,7 +23,7 @@ void Window::clear_screen() const
 
 void Window::event_loop()
 {
-    string datafile="data_from_"+name+".txt";
+    string datafile="data_from_"+_name+".txt";
     ofstream kifele(datafile);
 
     event ev;
@@ -73,10 +74,12 @@ void Window::event_loop()
         //Log
         if(ev.type == ev_key && ev.keycode == key_f1)
         {
-            for(size_t i=0; i<widgets.size(); i++)
+            kifele.clear();
+            for(int i=0; i<widgets.size(); i++)
             {
-                widgets[i]->get_data(kifele);
+                widgets[i]->get_data(kifele, i);
             }
+            cout<<"Successful save"<<endl;
         }
     }
 
