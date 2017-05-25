@@ -28,7 +28,7 @@ public:
     virtual void set_ex_size();
     virtual string get_actual_itme() const;
     virtual void get_data(ostream & datafile, int i) const;
-    virtual bool is_hover(int mouse_posx, int mouse_posy) const;
+    virtual bool is_hover(int mouse_posx, int mouse_posy);
 };
 
 #endif // DROPDOWNMENU_HPP_INCLUDED

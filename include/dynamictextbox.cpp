@@ -46,6 +46,13 @@ void DynamicTextBox::handle(genv::event ev)
     }
 }
 
+void DynamicTextBox::set_selected(bool selected)
+{
+    _selected=selected;
+    if(_selected) _line_color=_aline_color;
+    else _line_color=_pline_color;
+}
+
 void DynamicTextBox::get_data(ostream & datafile, int i) const
 {
     datafile <<"----"<<i<<"----"<< endl << "A jelenlegi tartalom: " << _title << endl <<"----"<<i<<"----"<< endl;

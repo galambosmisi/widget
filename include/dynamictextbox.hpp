@@ -17,7 +17,7 @@ public:
     DynamicTextBox(Window * parent, int x, int y, int sx, int sy, bool selectable, string pos, string title, bool boxed);
     virtual void draw() const ;
     virtual void handle(genv::event ev);
-
+    virtual void set_selected(bool selected);
     virtual void get_data(ostream & datafile, int i) const;
 };
 

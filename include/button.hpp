@@ -14,7 +14,8 @@ protected:
     bool _center_title;
     bool _pushed;
     std::function<void()> _action;
-    color _back_color, _text_color, _line_color;
+    color _back_color, _text_color, _aline_color, _pline_color;
+    color _line_color;
 
 public:
     Button(Window * parent,int x, int y, int sx, int sy, bool selectable, string pos, string title, std::function<void()> action);
@@ -24,6 +25,7 @@ public:
     virtual string get_title() const;
     virtual void set_title_(string title);
     virtual void set_pushed(bool pushed);
+    virtual bool is_hover(int mouse_posx, int mouse_posy);
     virtual void get_data(ostream & datafile, int i) const;
 };
 

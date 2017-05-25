@@ -14,7 +14,7 @@ Widget::Widget(Window * parent, int x, int y, int sx, int sy, bool selectable)
     _selectable=selectable;
 }
 
-bool Widget::is_hover(int mouse_posx, int mouse_posy) const
+bool Widget::is_hover(int mouse_posx, int mouse_posy)
 {
     return mouse_posx < _x+_size_x && mouse_posx > _x && mouse_posy < _y+_size_y && mouse_posy > _y;
 }

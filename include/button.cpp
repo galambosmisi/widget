@@ -4,7 +4,7 @@
 using namespace genv;
 
 Button::Button(Window * parent,int x, int y, int sx, int sy, bool selectable, string pos, string title, function<void()> action = []() {})
-    :Widget(parent, x, y, sx, sy, selectable), _back_color(parent->back_), _text_color(parent->text_),  _line_color(parent->pline_)
+    :Widget(parent, x, y, sx, sy, selectable), _back_color(parent->back_), _text_color(parent->text_), _aline_color(parent->aline_), _pline_color(parent->pline_),  _line_color(parent->pline_)
 {
     _pos=pos;
     _title=title;
@@ -29,8 +29,6 @@ void Button::draw() const
 
 void Button::handle(genv::event ev)
 {
-    if(_selectable)
-    {
         if(is_hover(ev.pos_x, ev.pos_y) && ev.button == btn_left)
         {
             set_pushed(true);
@@ -40,7 +38,6 @@ void Button::handle(genv::event ev)
             set_pushed(false);
             _action();
         }
-    }
 }
 
 void Button::set_action(function<void()> action)
@@ -62,6 +59,16 @@ void Button::set_pushed(bool pushed)
 {
     _pushed=pushed;
 }
+
+bool Button::is_hover(int mouse_posx, int mouse_posy)
+{
+    bool asd= mouse_posx < _x+_size_x && mouse_posx > _x && mouse_posy < _y+_size_y && mouse_posy > _y;
+    if(asd) _line_color=_aline_color;
+    else _line_color=_pline_color;
+    return asd;
+}
+
+
 
 void Button::get_data(ostream & datafile, int i) const
 {

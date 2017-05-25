@@ -20,7 +20,7 @@ protected:
 
 public:
     Widget(Window * parent, int x, int y, int sx, int sy, bool selectable);
-    virtual bool is_hover(int mouse_posx, int mouse_posy) const;
+    virtual bool is_hover(int mouse_posx, int mouse_posy);
     virtual bool is_selected() const ;
     virtual bool is_selectable() const;
     virtual void draw() const;

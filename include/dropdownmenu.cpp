@@ -48,20 +48,20 @@ void DropDownMenu::draw() const
 
     //Szöveg
     gout<<_text_color;
-    string s = "Ures menu";
+    string s = "Empty.. :(";
     if(items.size() > 0) s = items[actual];
     gout << move_to(_x+4, _y+_size_y/2+5) << text(cut_title(s, _size_x-box_size-8));
 
     //Nyil
     if(!isExtended)
     {
-        gout << move_to(_x+_size_x-box_size/2,_y+box_size/2+box_size/4) << line_to(_x+_size_x-box_size/2+box_size/4,_y+box_size/2-box_size/4);
-        gout << move_to(_x+_size_x-box_size/2,_y+box_size/2+box_size/4) << line_to(_x+_size_x-box_size/2-box_size/4,_y+box_size/2-box_size/4);
+        gout << move_to(_x+_size_x-box_size/2,_y+box_size/2+box_size/4) << _text_color << line_to(_x+_size_x-box_size/2+box_size/4,_y+box_size/2-box_size/4);
+        gout << move_to(_x+_size_x-box_size/2,_y+box_size/2+box_size/4) << _text_color << line_to(_x+_size_x-box_size/2-box_size/4,_y+box_size/2-box_size/4);
     }
     else
     {
-        gout << move_to(_x+_size_x-box_size/2,_y+box_size/2-box_size/4) << line_to(_x+_size_x-box_size/2+box_size/4,_y+box_size/2+box_size/4);
-        gout << move_to(_x+_size_x-box_size/2,_y+box_size/2-box_size/4) << line_to(_x+_size_x-box_size/2-box_size/4,_y+box_size/2+box_size/4);
+        gout << move_to(_x+_size_x-box_size/2,_y+box_size/2-box_size/4) << _text_color << line_to(_x+_size_x-box_size/2+box_size/4,_y+box_size/2+box_size/4);
+        gout << move_to(_x+_size_x-box_size/2,_y+box_size/2-box_size/4) << _text_color << line_to(_x+_size_x-box_size/2-box_size/4,_y+box_size/2+box_size/4);
     }
 
     int   XX=_size_x-13;
@@ -118,7 +118,7 @@ void DropDownMenu::set_selected(bool selected)
     else _line_color = _pline_color;
 }
 
-bool DropDownMenu::is_hover(int mouse_posx, int mouse_posy) const
+bool DropDownMenu::is_hover(int mouse_posx, int mouse_posy)
 {
     bool asd=false;
     if(!isExtended)
