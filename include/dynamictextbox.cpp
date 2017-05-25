@@ -22,9 +22,9 @@ void DynamicTextBox::draw() const
         gout << move_to(_x+1, _y+1) << _back_color << box(_size_x-2, _size_y-2);
     }
     gout << _text_color;
-    if(_pos=="left") gout << move_to(_x+4, _y+_size_y/2+5) << text(cut_title(t, _size_x));
-    if(_pos=="middle") gout << move_to(_x+_size_x/2-gout.twidth(cut_title(t, _size_x))/2, _y+_size_y/2+5) << text(cut_title(t, _size_x));
-    if(_pos=="right") gout << move_to(_x+_size_x-8-gout.twidth(cut_title(t, _size_x)), _y+_size_y/2+5) << text(cut_title(t, _size_x));
+    if(_pos=="left") gout << move_to(_x+4, _y+_size_y/2+gout.cascent()/2) << text(cut_title(t, _size_x));
+    if(_pos=="middle") gout << move_to(_x+_size_x/2-gout.twidth(cut_title(t, _size_x))/2, _y+_size_y/2+gout.cascent()/2) << text(cut_title(t, _size_x));
+    if(_pos=="right") gout << move_to(_x+_size_x-8-gout.twidth(cut_title(t, _size_x)), _y+_size_y/2+gout.cascent()/2) << text(cut_title(t, _size_x));
 }
 
 void DynamicTextBox::handle(genv::event ev)
@@ -55,7 +55,7 @@ void DynamicTextBox::set_selected(bool selected)
 
 void DynamicTextBox::get_data(ostream & datafile, int i) const
 {
-    datafile <<"----"<<i<<"----"<< endl << "A jelenlegi tartalom: " << _title << endl <<"----"<<i<<"----"<< endl;
+    datafile <<"----"<<i<<"----"<< endl << "A dinamikus text tartalma: " << _title << endl <<"----"<<i<<"----"<< endl << endl;
 }
 
 

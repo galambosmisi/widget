@@ -31,7 +31,7 @@ void NumericSetter::draw() const
     //Szöveg
     gout<<_text_color;
     if (gout.twidth(ss.str())<= _size_x-box_size-8)
-        gout << move_to(_x+_size_x-box_size-gout.twidth(ss.str())-4, _y+_size_y/2+5) << text(ss.str());
+        gout << move_to(_x+_size_x-box_size-gout.twidth(ss.str())-4, _y+_size_y/2+gout.cascent()/2) << text(ss.str());
 
     //Nyilak
     gout << move_to(_x+_size_x-box_size/2,_y+box_size/2-box_size/4) << line_to(_x+_size_x-box_size/2+box_size/4,_y+box_size/2+box_size/4);
@@ -64,5 +64,5 @@ int NumericSetter::get_num() const
 
 void NumericSetter::get_data(ostream & datafile, int i) const
 {
-    datafile <<"----"<<i<<"----"<< endl << "Jelenlegi ertek: " << _num << endl <<"----"<<i<<"----"<< endl;
+    datafile <<"----"<<i<<"----"<< endl << "Szambeallito erteke: " << _num << endl <<"----"<<i<<"----"<< endl << endl;
 }

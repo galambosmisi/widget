@@ -19,8 +19,10 @@ void StaticTextBox::draw() const
 {
     if(_boxed)
     {
-        gout << move_to(_x, _y) << _line_color << box(_size_x, _size_y);
-        gout << move_to(_x+1,_y+1) << _back_color << box (_size_x-3, _size_y-3);
+        gout << move_to(_x +1, _y+1) << _back_color << box(_size_x , _size_y )
+    << move_to(_x +1 , _y +1 ) << _line_color << box(_size_x, _size_y)
+    << move_to(_x, _y) << _line_color << box(_size_x, _size_y)
+    << move_to(_x + 1,_y + 1) << _back_color << box(_size_x - 2, _size_y - 2);
     }
     gout << _text_color;
     if(_pos=="left") gout << move_to(_x+4, _y+_size_y/2+5) << text(cut_title(_title, _size_x));
@@ -43,7 +45,7 @@ string StaticTextBox::get_title() const
 
 void StaticTextBox::get_data(ostream & datafile, int i) const
 {
-    datafile <<"----"<<i<<"----"<< endl << "Jelenlegi tartalom: " << _title << endl <<"----"<<i<<"----"<< endl;
+    datafile <<"----"<<i<<"----"<< endl << "A statikus text tartalma: " << _title << endl <<"----"<<i<<"----"<< endl << endl;
 }
 
 

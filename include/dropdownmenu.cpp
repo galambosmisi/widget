@@ -53,15 +53,19 @@ void DropDownMenu::draw() const
     gout << move_to(_x+4, _y+_size_y/2+5) << text(cut_title(s, _size_x-box_size-8));
 
     //Nyil
-    if(!isExtended)
+    if(!isExtended && items.size() > 1)
     {
         gout << move_to(_x+_size_x-box_size/2,_y+box_size/2+box_size/4) << _text_color << line_to(_x+_size_x-box_size/2+box_size/4,_y+box_size/2-box_size/4);
         gout << move_to(_x+_size_x-box_size/2,_y+box_size/2+box_size/4) << _text_color << line_to(_x+_size_x-box_size/2-box_size/4,_y+box_size/2-box_size/4);
     }
-    else
+    else if(items.size() > 1)
     {
         gout << move_to(_x+_size_x-box_size/2,_y+box_size/2-box_size/4) << _text_color << line_to(_x+_size_x-box_size/2+box_size/4,_y+box_size/2+box_size/4);
         gout << move_to(_x+_size_x-box_size/2,_y+box_size/2-box_size/4) << _text_color << line_to(_x+_size_x-box_size/2-box_size/4,_y+box_size/2+box_size/4);
+    }
+    else
+    {
+        gout << move_to(_x+_size_x-box_size+4,_y+box_size/2) << _text_color << line(box_size-8,0);
     }
 
     int   XX=_size_x-13;
@@ -88,7 +92,7 @@ void DropDownMenu::draw() const
             ss.str("");
             if(i==actual) j++;
             string s = items[j];
-            C << color(0,0,0) << move_to(4,_size_y+i*_size_y-_size_y/2+5) << text(cut_title(s, _size_x-14));
+            C << color(0,0,0) << move_to(4,_size_y+i*_size_y-_size_y/2+gout.cascent()/2) << text(cut_title(s, _size_x-14));
             //Keret
             C << _line_color << move_to(0,_size_y+i*_size_y-1) << line_to(XX, _size_y+i*_size_y);
             j++;
@@ -202,23 +206,40 @@ void DropDownMenu::handle(event ev)
 
 }
 
-void DropDownMenu::add_answer(string s)
+void DropDownMenu::add_item(string s)
 {
     items.push_back(s);
     set_ex_size();
-    if(items.size()-_max_item!=0) slider_size=(items.size()-1)*_size_y/(items.size()-1-(_max_item-1));
-    if(items.size()-_max_item==0 || items.size()-_max_item==1) slider_size=0;
+    if( ((int)items.size()-_max_item) > 0) slider_size=(items.size()-1)*_size_y/(items.size()-(_max_item));
+    else slider_size=ex_size_y-box_size;
+    if(actual >= items.size()-1) actual=0;
 }
 
-void DropDownMenu::delet_actual_answer()
+void DropDownMenu::delet_actual_item()
 {
     if(items.size() > 0) items.erase(items.begin()+actual);
     if(items.size() <= 1) isExtended=false;
     set_ex_size();
-    bool asd = ((int)items.size()-_max_item) > 0;
     if( ((int)items.size()-_max_item) > 0) slider_size=(items.size()-1)*_size_y/(items.size()-(_max_item));
     else slider_size=ex_size_y-box_size;
     if(actual >= items.size()-1) actual=0;
+}
+
+void DropDownMenu::delet_item_by_idx(int idx)
+{
+    if(items.size() > 0) items.erase(items.begin()+idx);
+    if(items.size() <= 1) isExtended=false;
+    set_ex_size();
+    if( ((int)items.size()-_max_item) > 0) slider_size=(items.size()-1)*_size_y/(items.size()-(_max_item));
+    else slider_size=ex_size_y-box_size;
+    if(actual >= items.size()-1) actual=0;
+}
+
+int DropDownMenu::get_actual_itme_idx() const
+{
+    int asd=-1;
+    if(actual >= 0) asd=actual;
+    return asd;
 }
 
 void DropDownMenu::get_data(ostream & datafile, int i) const
@@ -229,5 +250,5 @@ void DropDownMenu::get_data(ostream & datafile, int i) const
         if(i!=actual) datafile <<"  "<< i+1 <<". " << items[i] <<endl;
         else  datafile <<"  "<< i+1 <<". " << items[i] << " (actual)" <<endl;
     }
-    datafile <<"----"<<i<<"----"<< endl;
+    datafile <<"----"<<i<<"----"<< endl << endl;
 }

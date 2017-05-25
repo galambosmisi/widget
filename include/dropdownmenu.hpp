@@ -22,11 +22,13 @@ public:
     DropDownMenu(Window * parent,int x, int y, int sx, int sy, bool selectable, int max_item, vector <string>& s);
     virtual void draw() const ;
     virtual void handle(genv::event ev);
-    virtual void add_answer(string s);
+    virtual void add_item(string s);
     virtual void set_selected(bool selected);
-    virtual void delet_actual_answer();
+    virtual void delet_actual_item();
+    virtual void delet_item_by_idx(int idx);
     virtual void set_ex_size();
     virtual string get_actual_itme() const;
+    virtual int get_actual_itme_idx() const;
     virtual void get_data(ostream & datafile, int i) const;
     virtual bool is_hover(int mouse_posx, int mouse_posy);
 };

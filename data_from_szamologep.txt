@@ -1,0 +1,74 @@
+----0----
+A statikus text tartalma: 0
+----0----
+
+----1----
+A gomb felirata: 7
+Erteke: 0
+----1----
+
+----2----
+A gomb felirata: 8
+Erteke: 0
+----2----
+
+----3----
+A gomb felirata: 9
+Erteke: 0
+----3----
+
+----4----
+A gomb felirata: C
+Erteke: 0
+----4----
+
+----5----
+A gomb felirata: 4
+Erteke: 0
+----5----
+
+----6----
+A gomb felirata: 5
+Erteke: 0
+----6----
+
+----7----
+A gomb felirata: 6
+Erteke: 0
+----7----
+
+----8----
+A gomb felirata: -
+Erteke: 0
+----8----
+
+----9----
+A gomb felirata: 1
+Erteke: 0
+----9----
+
+----10----
+A gomb felirata: 2
+Erteke: 0
+----10----
+
+----11----
+A gomb felirata: 3
+Erteke: 0
+----11----
+
+----12----
+A gomb felirata: +
+Erteke: 0
+----12----
+
+----13----
+A gomb felirata: 0
+Erteke: 0
+----13----
+
+----14----
+A gomb felirata: =
+Erteke: 0
+----14----
+

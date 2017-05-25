@@ -24,6 +24,7 @@ public:
     virtual void set_action(std::function<void()> action);
     virtual string get_title() const;
     virtual void set_title_(string title);
+    virtual void set_selectable(bool selectable);
     virtual void set_pushed(bool pushed);
     virtual bool is_hover(int mouse_posx, int mouse_posy);
     virtual void get_data(ostream & datafile, int i) const;

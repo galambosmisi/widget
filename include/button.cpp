@@ -11,6 +11,8 @@ Button::Button(Window * parent,int x, int y, int sx, int sy, bool selectable, st
     _action=action;
     _pushed=false;
     _parent->push_item(this);
+    if(!_selectable) _line_color=color(245,245,245);
+    else _line_color=_pline_color;
 }
 
 void Button::draw() const
@@ -21,9 +23,9 @@ void Button::draw() const
     << move_to(_pushed ? _x + 1 : _x, _pushed ? _y + 1 : _y) << _line_color << box(_size_x, _size_y)
     << move_to(_pushed ? _x + 2 : _x + 1, _pushed ? _y + 2 : _y + 1) << _back_color << box(_size_x - 2, _size_y - 2);
 
-    if(_pos=="left") gout << move_to(_pushed ? _x+5 : _x+4,_pushed ? _y+(_size_y-2)/2+6 : _y+(_size_y-2)/2+5) << _text_color << text(cut_title(_title, _size_x));
-    if(_pos=="middle") gout << move_to(_pushed ? _x+(_size_x-2)/2-gout.twidth(cut_title(_title, _size_x))/2+1 : _x+(_size_x-2)/2-gout.twidth(cut_title(_title, _size_x))/2,_pushed ? _y+(_size_y-2)/2+6 : _y+(_size_y-2)/2+5) << _text_color << text(cut_title(_title, _size_x));
-    if(_pos=="right") gout << move_to(_pushed ? _x+_size_x-6-gout.twidth(cut_title(_title, _size_x))+1 : _x+_size_x-6-gout.twidth(cut_title(_title, _size_x)), _pushed ? _y+(_size_y-2)/2+6 : _y+(_size_y-2)/2+5) << _text_color << text(cut_title(_title, _size_x));
+    if(_pos=="left") gout << move_to(_pushed ? _x+5 : _x+4,_pushed ? _y+(_size_y-2)/2+gout.cascent()/2+1 : _y+(_size_y-2)/2+gout.cascent()/2) << _text_color << text(cut_title(_title, _size_x));
+    if(_pos=="middle") gout << move_to(_pushed ? _x+(_size_x-2)/2-gout.twidth(cut_title(_title, _size_x))/2+1 : _x+(_size_x-2)/2-gout.twidth(cut_title(_title, _size_x))/2,_pushed ? _y+(_size_y-2)/2+gout.cascent()/2+1 : _y+(_size_y-2)/2+gout.cascent()/2) << _text_color << text(cut_title(_title, _size_x));
+    if(_pos=="right") gout << move_to(_pushed ? _x+_size_x-8-gout.twidth(cut_title(_title, _size_x))+1 : _x+_size_x-8-gout.twidth(cut_title(_title, _size_x)), _pushed ? _y+(_size_y-2)/2+gout.cascent()/2+1 : _y+(_size_y-2)/2+gout.cascent()/2) << _text_color << text(cut_title(_title, _size_x));
 
 }
 
@@ -55,6 +57,13 @@ void Button::set_title_(string title)
     _title = title;
 }
 
+void Button::set_selectable(bool selectable)
+{
+    _selectable=selectable;
+    if(!_selectable) _line_color=color(245,245,245);
+    else _line_color=_pline_color;
+}
+
 void Button::set_pushed(bool pushed)
 {
     _pushed=pushed;
@@ -62,9 +71,9 @@ void Button::set_pushed(bool pushed)
 
 bool Button::is_hover(int mouse_posx, int mouse_posy)
 {
-    bool asd= mouse_posx < _x+_size_x && mouse_posx > _x && mouse_posy < _y+_size_y && mouse_posy > _y;
+    bool asd= mouse_posx < _x+_size_x && mouse_posx > _x && mouse_posy < _y+_size_y && mouse_posy > _y && _selectable;
     if(asd) _line_color=_aline_color;
-    else _line_color=_pline_color;
+    else if(_selectable) _line_color=_pline_color;
     return asd;
 }
 
@@ -72,5 +81,5 @@ bool Button::is_hover(int mouse_posx, int mouse_posy)
 
 void Button::get_data(ostream & datafile, int i) const
 {
-    datafile <<"----"<<i<<"----"<< endl << "A gomb felirata: " << _title << endl << "Erteke: " << _pushed << endl <<"----"<<i<<"----"<< endl;
+    datafile <<"----"<<i<<"----"<< endl << "A gomb felirata: " << _title << endl << "Erteke: " << _pushed << endl <<"----"<<i<<"----"<< endl << endl;
 }
