@@ -1,0 +1,64 @@
+----0----
+A statikus text tartalma: Nev
+----0----
+
+----1----
+A statikus text tartalma: Ho
+----1----
+
+----2----
+A statikus text tartalma: Nap
+----2----
+
+----3----
+A statikus text tartalma: Szuletesnapok:
+----3----
+
+----4----
+A statikus text tartalma: Filter
+----4----
+
+----5----
+A dinamikus text tartalma: Ide irhat.. (starter)
+----5----
+
+----6----
+A gomb felirata: Hozzaad
+Erteke: 0
+----6----
+
+----7----
+A gomb felirata: search
+Erteke: 1
+----7----
+
+----8----
+A lista tartalma: 
+  1. Misi (11. 28.) (actual)
+----8----
+
+----9----
+A lista tartalma: 
+  1. Minden
+  2. Januar
+  3. Februar
+  4. Marcius
+  5. Aprilis
+  6. Majus
+  7. Junius
+  8. Julius
+  9. Augusztus
+  10. Szeptember
+  11. Oktober
+  12. November (actual)
+  13. December
+----9----
+
+----10----
+Szambeallito erteke: 1
+----10----
+
+----11----
+Szambeallito erteke: 1
+----11----
+

@@ -93,10 +93,10 @@ void Window::event_loop()
             int _y = _YY/2-2*gout.cascent();
             int _size_x = 4*gout.twidth(_title);
             int _size_y = 4*gout.cascent();
-            gout << move_to(_x +1, _y+1) << color(10,200,0) << box(_size_x , _size_y )
+            gout << move_to(_x +1, _y+1) << color(60,179,113) << box(_size_x , _size_y )
             << move_to(_x +1 , _y +1 ) << color(0,0,0) << box(_size_x, _size_y)
             << move_to(_x, _y) << color(0,0,0) << box(_size_x, _size_y)
-            << move_to(_x + 1,_y + 1) << color(10,200,0) << box(_size_x - 2, _size_y - 2);
+            << move_to(_x + 1,_y + 1) << color(60,179,113) << box(_size_x - 2, _size_y - 2);
             gout << move_to(_x+_size_x/2-gout.twidth(_title)/2, _y+_size_y/2+5) << color(0,0,0) << text(_title);
             gout << refresh;
         }

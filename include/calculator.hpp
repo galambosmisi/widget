@@ -10,7 +10,7 @@
 #include "dynamictextbox.hpp"
 #include "numericsetter.hpp"
 #include "statictextbox.hpp"
-#include <vector>
+
 
 class Calculator : public Window
 {

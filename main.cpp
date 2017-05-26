@@ -1,11 +1,12 @@
 #include "carrent.hpp"
 #include "calculator.hpp"
+#include "birthdaycalendar.hpp"
 
 using namespace std;
 using namespace genv;
 
-const int XX = 600;
-const int YY = 350;
+const int XX = 650;
+const int YY = 600;
 
 color _back(245,245,245);
 color _text(48,72,72);
@@ -44,11 +45,14 @@ int main()
     autok.push_back("Skoda");
 
 
-    //CarRent voros_car("voros_auto",XX,YY,_back, _text, _aline, _pline, _bg, nevek, autok);
+    //CarRent voros_car("voros_auto", 710, 600, _back, _text, _aline, _pline, _bg, nevek, autok);
     //voros_car.event_loop();
 
-    Calculator szamologep("szamologep", XX,YY,_back, _text, _aline, _pline, _bg);
-    szamologep.event_loop();
+    //Calculator szamologep("szamologep", 235, 290, _back, _text, _aline, _pline, _bg);
+    //szamologep.event_loop();
+
+    MyBirthdayCalendar szulinapok("szulinapok", 650, 600, _back, _text, _aline, _pline, _bg);
+    szulinapok.event_loop();
 
     return 0;
 }

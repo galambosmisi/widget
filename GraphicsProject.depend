@@ -480,23 +480,23 @@
 
 1495622464 \\mac\home\desktop\widget_gm\include\color.hpp
 
-1495749413 source:\\mac\home\desktop\widget_gm\include\dropdownmenu.cpp
+1495796192 source:\\mac\home\desktop\widget_gm\include\dropdownmenu.cpp
 	"dropdownmenu.hpp"
 	"graphics.hpp"
 	<sstream>
 	<vector>
 	<iostream>
 
-1495732496 \\mac\home\desktop\widget_gm\include\dropdownmenu.hpp
+1495795832 \\mac\home\desktop\widget_gm\include\dropdownmenu.hpp
 	"graphics.hpp"
 	"widgets.hpp"
 	<vector>
 
-1495749413 source:\\mac\home\desktop\widget_gm\include\dynamictextbox.cpp
+1495793815 source:\\mac\home\desktop\widget_gm\include\dynamictextbox.cpp
 	"dynamictextbox.hpp"
 	"graphics.hpp"
 
-1495726316 \\mac\home\desktop\widget_gm\include\dynamictextbox.hpp
+1495793815 \\mac\home\desktop\widget_gm\include\dynamictextbox.hpp
 	"graphics.hpp"
 	"widgets.hpp"
 	"statictextbox.hpp"
@@ -505,12 +505,12 @@
 	"graphics.hpp"
 	"widgets.hpp"
 
-1495749413 source:\\mac\home\desktop\widget_gm\include\numericsetter.cpp
+1495794017 source:\\mac\home\desktop\widget_gm\include\numericsetter.cpp
 	"numericsetter.hpp"
 	"graphics.hpp"
 	<sstream>
 
-1495724475 \\mac\home\desktop\widget_gm\include\numericsetter.hpp
+1495794017 \\mac\home\desktop\widget_gm\include\numericsetter.hpp
 	"graphics.hpp"
 	"widgets.hpp"
 
@@ -519,7 +519,7 @@
 	"graphics.hpp"
 	<sstream>
 
-1495749898 source:\\mac\home\desktop\widget_gm\include\window.cpp
+1495796535 source:\\mac\home\desktop\widget_gm\include\window.cpp
 	"window.hpp"
 	"graphics.hpp"
 	<fstream>
@@ -541,9 +541,10 @@
 	"widgets.hpp"
 	"graphics.hpp"
 
-1495749177 source:\\mac\home\desktop\widget_gm\main.cpp
+1495796323 source:\\mac\home\desktop\widget_gm\main.cpp
 	"carrent.hpp"
 	"calculator.hpp"
+	"birthdaycalendar.hpp"
 
 1495702273 source:\\mac\home\desktop\widget_gm\include\sebiselector.cpp
 	<iostream>
@@ -577,14 +578,29 @@
 	"statictextbox.hpp"
 	<vector>
 
-1495748547 source:\\mac\home\desktop\widget_gm\include\carrent.cpp
+1495796065 source:\\mac\home\desktop\widget_gm\include\carrent.cpp
 	"carrent.hpp"
 
 1495748108 source:\\mac\home\desktop\widget_gm\calculator.cpp
 	"calculator.hpp"
 	<sstream>
 
-1495746362 \\mac\home\desktop\widget_gm\include\calculator.hpp
+1495790204 \\mac\home\desktop\widget_gm\include\calculator.hpp
+	"graphics.hpp"
+	"window.hpp"
+	"widgets.hpp"
+	"button.hpp"
+	"checkbox.hpp"
+	"dropdownmenu.hpp"
+	"dynamictextbox.hpp"
+	"numericsetter.hpp"
+	"statictextbox.hpp"
+
+1495794899 source:\\mac\home\desktop\widget_gm\include\birthdaycalendar.cpp
+	"birthdaycalendar.hpp"
+	<sstream>
+
+1495792339 \\mac\home\desktop\widget_gm\include\birthdaycalendar.hpp
 	"graphics.hpp"
 	"window.hpp"
 	"widgets.hpp"

@@ -10,6 +10,16 @@ DynamicTextBox::DynamicTextBox(Window * parent, int x, int y, int sx, int sy, bo
     _title=title;
 }
 
+bool DynamicTextBox::has_changed()
+{
+    return !(_starter==_title);
+}
+
+void DynamicTextBox::reset()
+{
+    _title=_starter;
+}
+
 void DynamicTextBox::draw() const
 {
     string t;
@@ -55,7 +65,9 @@ void DynamicTextBox::set_selected(bool selected)
 
 void DynamicTextBox::get_data(ostream & datafile, int i) const
 {
-    datafile <<"----"<<i<<"----"<< endl << "A dinamikus text tartalma: " << _title << endl <<"----"<<i<<"----"<< endl << endl;
+    datafile <<"----"<<i<<"----"<< endl << "A dinamikus text tartalma: " << _title;
+    if(_title==_starter) datafile<<" (starter)";
+     datafile << endl <<"----"<<i<<"----"<< endl << endl;
 }
 
 

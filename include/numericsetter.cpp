@@ -57,6 +57,11 @@ void NumericSetter::set_selected(bool selected)
     else _line_color = _pline_color;
 }
 
+void NumericSetter::reset()
+{
+    _num=_min;
+}
+
 int NumericSetter::get_num() const
 {
     return _num;

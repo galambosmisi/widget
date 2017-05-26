@@ -42,10 +42,12 @@
 			<Add library="lib/libSDLmain.a" />
 			<Add directory="lib" />
 		</Linker>
-		<Unit filename="\\Mac\Home\Desktop\Widget_GM\calculator.cpp" />
-		<Unit filename="\\Mac\Home\Desktop\Widget_GM\include\calculator.hpp" />
+		<Unit filename="calculator.cpp" />
+		<Unit filename="include/birthdaycalendar.cpp" />
+		<Unit filename="include/birthdaycalendar.hpp" />
 		<Unit filename="include/button.cpp" />
 		<Unit filename="include/button.hpp" />
+		<Unit filename="include/calculator.hpp" />
 		<Unit filename="include/carrent.cpp" />
 		<Unit filename="include/carrent.hpp" />
 		<Unit filename="include/checkbox.cpp" />

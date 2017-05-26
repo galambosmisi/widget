@@ -18,6 +18,7 @@ public:
     virtual void draw() const ;
     virtual void handle(genv::event ev);
     virtual void set_selected(bool selected);
+    virtual void reset();
     virtual int get_num() const ;
     virtual void get_data(ostream & datafile, int i) const;
 };
